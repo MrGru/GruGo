@@ -1,0 +1,8 @@
+FROM golang:alpine
+
+ENV GOPATH /Go/
+ADD . /Go/src/github.com/MrGru/GruGo/cookbook/distributed_systems/orchestrate
+WORKDIR /Go/src/github.com/MrGru/GruGo/cookbook/distributed_systems/orchestrate/example
+RUN go build
+
+ENTRYPOINT /Go/src/github.com/MrGru/GruGo/cookbook/distributed_systems/orchestrate/example/example

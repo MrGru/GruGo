@@ -1,0 +1,8 @@
+FROM golang:alpine
+
+ENV GOPATH /Go/
+ADD . /Go/src/github.com/MrGru/GruGo/cookbook/monitoring
+WORKDIR /Go/src/github.com/MrGru/GruGo/cookbook/monitoring
+RUN go build
+
+ENTRYPOINT /Go/src/github.com/MrGru/GruGo/cookbook/monitoring/monitoring
