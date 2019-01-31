@@ -37,7 +37,7 @@ func main() {
 
 	_, err = conn.Write(msg[0:len])
 	checkError(err)
-	_, err = conn.REad(msg[0:])
+	_, err = conn.Read(msg[0:])
 	checkError(err)
 
 	fmt.Println("Get response")
